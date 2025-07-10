@@ -1,38 +1,115 @@
-.App {
+/* Styles for App Component Layout */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #0F1D26; /* Dark background from brand theme */
+  color: #FFFFFF; /* White text */
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the logo */
+.logo-container {
+  height: 60px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  height: 100%; /* Make logo fill container height */
+  width: auto;
+}
+
+.app-header nav a {
+  color: #FFFFFF;
+  margin-left: 1.5rem;
+  font-weight: 400;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover and active */
+  padding-bottom: 5px; /* Space for the underline */
+  border-bottom: 2px solid transparent; /* Transparent border by default */
+}
+
+.app-header nav a:hover {
+  color: #F25C05; /* Orange accent on hover */
+}
+
+/* Style for the active navigation link */
+.app-header nav a.active {
+  color: #D9910B; /* Gold for active link */
+  border-bottom: 2px solid #D9910B; /* Gold underline for active link */
+  font-weight: 700; /* Make active link bold */
+}
+
+
+.app-main {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-section { /* This class is no longer directly used in App.js for rendering pages but kept for potential future use */
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.page-section:last-child {
+  border-bottom: none;
+}
+
+.page-section h2 {
+  font-size: 2.5rem;
+  color: #262626;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app-footer {
+  background-color: #262626;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+* Basic Responsiveness */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: row; /* Keep logo and hamburger on one row */
+    justify-content: space-between; /* Space between logo and hamburger */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .logo-container {
+    height: 50px; /* Smaller logo on mobile */
   }
-  to {
-    transform: rotate(360deg);
+
+  .desktop-nav { /* Add this rule */
+    display: none; /* Hide desktop nav on small screens */
   }
+
+  /* The mobile-nav styles in MobileNav.css will handle showing the hamburger */
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  /* ... rest of your existing media query styles ... */
 }
+
