@@ -3,7 +3,7 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
 }
 
 .app-header {
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Styles for the logo */
@@ -48,48 +48,23 @@
   font-weight: 700; /* Make active link bold */
 }
 
-
 .app-main {
-  flex-grow: 1;
+  flex-grow: 1; /* Allows main content to take up available space */
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.page-section { /* This class is no longer directly used in App.js for rendering pages but kept for potential future use */
-  padding: 3rem 0;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-}
-
-.page-section:last-child {
-  border-bottom: none;
-}
-
-.page-section h2 {
-  font-size: 2.5rem;
-  color: #262626;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.page-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  text-align: center;
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the content */
+  width: 100%; /* Ensure it takes full width up to max-width */
 }
 
 .app-footer {
-  background-color: #262626;
+  background-color: #262626; /* Dark Grey/Black from brand theme */
   color: #FFFFFF;
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
 }
 
-* Basic Responsiveness */
+/* Basic Responsiveness */
 @media (max-width: 768px) {
   .app-header {
     flex-direction: row; /* Keep logo and hamburger on one row */
@@ -100,16 +75,14 @@
     height: 50px; /* Smaller logo on mobile */
   }
 
-  .desktop-nav { /* Add this rule */
+  .desktop-nav {
     display: none; /* Hide desktop nav on small screens */
   }
-
-  /* The mobile-nav styles in MobileNav.css will handle showing the hamburger */
 
   .app-main {
     padding: 1rem;
   }
 
-  /* ... rest of your existing media query styles ... */
+  /* No need to explicitly hide mobile-nav here, its own CSS handles display: block */
+  /* No need for page-section styles here, they are in PageStyles.css */
 }
-
