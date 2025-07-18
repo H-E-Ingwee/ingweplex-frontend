@@ -681,5 +681,64 @@
     height: 200px;
   }
 }
+/* --- New Styles for Core Values Section (Enhanced) --- */
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background-color: #FFFFFF; /* White background for the cards */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 6px solid #D9910B; /* Gold accent border at the bottom */
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value-card .value-icon {
+  color: #F25C05; /* Orange icon color */
+  margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+  font-size: 1.6rem;
+  color: #0F1D26; /* Dark blue/black for title */
+  margin-bottom: 0.8rem;
+  border-bottom: none; /* Ensure no underline from general h3 styles */
+  padding-bottom: 0;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for Core Values Grid */
+@media (max-width: 1024px) {
+  .core-values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .core-values-grid {
+    grid-template-columns: 1fr; /* Stack on small screens */
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+}
 
 /* Additional styles for HomePage and ServicesPage content */

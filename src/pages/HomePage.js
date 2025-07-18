@@ -1,10 +1,10 @@
 import React from 'react';
 import './PageStyles.css';
-import { Lightbulb, Database, Award, Handshake, TrendingUp, CheckCircle, Target, Eye, Shield, Users, Rocket, BarChart2 } from 'lucide-react'; // Added more icons
+import { Lightbulb, Database, Award, Handshake, TrendingUp, CheckCircle, Target, Eye, Shield, Users, Rocket, BarChart2 } from 'lucide-react';
 
 function HomePage() {
   return (
-    <>
+    <> {/* Use a React Fragment to return multiple top-level elements */}
       {/* Hero Section - Already enhanced */}
       <section className="hero-section">
         <div className="container hero-content">
@@ -90,18 +90,42 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Core Values Section - Retained from previous, but now a distinct section */}
+      {/* Core Values Section - Now with improved card layout */}
       <section className="core-values-section container">
         <h2 className="section-title">Our Core Values</h2>
         <p className="section-subtitle">The principles that guide our every action and interaction.</p>
-        <ul className="values-list">
-          <li><Lightbulb size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Innovation:</strong> Embracing cutting-edge technology and creative approaches to deliver forward-thinking solutions.</li>
-          <li><Database size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Data-Driven:</strong> Basing strategies on real-time market insights and analytics to ensure measurable outcomes and targeted growth.</li>
-          <li><Award size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Client-Centric:</strong> Prioritizing client needs and building long-term partnerships through personalized attention and bespoke strategies.</li>
-          <li><Handshake size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Integrity:</strong> Upholding honesty, transparency, and ethical practices in all interactions and solutions.</li>
-          <li><TrendingUp size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Impact:</strong> Driving measurable and positive change for our clients, ensuring tangible business growth and success.</li>
-          <li><CheckCircle size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Agility:</strong> Providing flexible and adaptive solutions that respond effectively to changing market conditions.</li>
-        </ul>
+        <div className="core-values-grid"> {/* New grid container */}
+          <div className="value-card"> {/* New value card structure */}
+            <Lightbulb size={40} className="value-icon" />
+            <h3>Innovation</h3>
+            <p>Embracing cutting-edge technology and creative approaches to deliver forward-thinking solutions.</p>
+          </div>
+          <div className="value-card">
+            <Database size={40} className="value-icon" />
+            <h3>Data-Driven</h3>
+            <p>Basing strategies on real-time market insights and analytics to ensure measurable outcomes and targeted growth.</p>
+          </div>
+          <div className="value-card">
+            <Award size={40} className="value-icon" />
+            <h3>Client-Centric</h3>
+            <p>Prioritizing client needs and building long-term partnerships through personalized attention and bespoke strategies.</p>
+          </div>
+          <div className="value-card">
+            <Handshake size={40} className="value-icon" />
+            <h3>Integrity</h3>
+            <p>Upholding honesty, transparency, and ethical practices in all actions and solutions.</p>
+          </div>
+          <div className="value-card">
+            <TrendingUp size={40} className="value-icon" />
+            <h3>Impact</h3>
+            <p>Driving measurable and positive change for our clients, ensuring tangible business growth and success.</p>
+          </div>
+          <div className="value-card">
+            <CheckCircle size={40} className="value-icon" />
+            <h3>Agility</h3>
+            <p>Providing flexible and adaptive solutions that respond effectively to changing market conditions.</p>
+          </div>
+        </div>
       </section>
     </>
   );
