@@ -21,6 +21,7 @@ function ServicesPage() {
             <li>Training Programs</li>
           </ul>
           <p className="value-prop">Value Proposition: We transform businesses into digital-first leaders by combining cutting-edge technology with practical strategies, ensuring measurable outcomes like 15% operational cost reductions or 20% customer engagement growth.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a> {/* Added Learn More button */}
         </div>
 
         <div className="service-item">
@@ -32,6 +33,7 @@ function ServicesPage() {
             <li>Personalized Marketing Plans</li>
           </ul>
           <p className="value-prop">Value Proposition: Our data-centric approach ensures every strategy is unique, delivering measurable results like increased conversion rates or brand recall.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
 
         <div className="service-item">
@@ -43,6 +45,7 @@ function ServicesPage() {
             <li>Impact Reporting</li>
           </ul>
           <p className="value-prop">Value Proposition: We position brands as purpose-driven leaders, boosting market perception while contributing to a sustainable future, with potential for 15% growth in brand loyalty.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
 
         <div className="service-item">
@@ -54,6 +57,7 @@ function ServicesPage() {
             <li>Feedback Integration</li>
           </ul>
           <p className="value-prop">Value Proposition: We enhance customer satisfaction by 20% through personalized, tech-enabled experiences, driving repeat business and referrals.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
 
         <div className="service-item">
@@ -65,6 +69,7 @@ function ServicesPage() {
             <li>Scalable Solutions</li>
           </ul>
           <p className="value-prop">Value Proposition: Our agile approach ensures clients see results within weeks, adapting to their needs with minimal disruption and maximum impact.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
 
         <div className="service-item">
@@ -76,6 +81,7 @@ function ServicesPage() {
             <li>Post-Project Analysis</li>
           </ul>
           <p className="value-prop">Value Proposition: We guarantee measurable results, ensuring every dollar invested translates into tangible business growth.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
 
         <div className="service-item">
@@ -87,6 +93,7 @@ function ServicesPage() {
             <li>Boutique Advantage</li>
           </ul>
           <p className="value-prop">Value Proposition: Our niche expertise and client-first approach build lasting trust, delivering solutions that drive 10–20% growth in market share.</p>
+          <a href="#contact" className="service-learn-more-btn">Learn More</a>
         </div>
       </div>
     </section>
