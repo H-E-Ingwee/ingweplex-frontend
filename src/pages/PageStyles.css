@@ -470,4 +470,216 @@
     padding: 1.5rem;
   }
 }
+/* --- New HomePage Specific Styles (Inspired by Pawatech) --- */
+
+/* General Section Titles */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0F1D26; /* Dark Blue/Black */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* About Overview Section */
+.about-overview-section {
+  padding: 4rem 0;
+  background-color: #F8F8F8; /* Light background */
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-card-image {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.about-card h3 {
+  font-size: 1.8rem;
+  color: #F25C05; /* Orange accent */
+  margin-bottom: 1rem;
+  border-bottom: none; /* Remove underline */
+  padding-bottom: 0;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #4A4A4A;
+  line-height: 1.7;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+  padding: 4rem 0;
+  background-color: #EFEFEF; /* Slightly darker background */
+  text-align: center;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mission-vision-card {
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid #D9910B; /* Gold accent */
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision-card .mv-icon {
+  color: #F25C05; /* Orange icon color */
+  margin-bottom: 1.5rem;
+}
+
+.mission-vision-card h3 {
+  font-size: 1.8rem;
+  color: #0F1D26;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mission-vision-card p {
+  font-size: 1.05rem;
+  color: #4A4A4A;
+  line-height: 1.7;
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+  padding: 4rem 0;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.choose-us-card {
+  background-color: #F9F9F9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-us-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.choose-us-card .choose-us-icon {
+  color: #D9910B; /* Gold icon color */
+  margin-bottom: 1.5rem;
+}
+
+.choose-us-card h3 {
+  font-size: 1.6rem;
+  color: #262626;
+  margin-bottom: 0.8rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.choose-us-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Core Values Section - Re-styled slightly */
+.core-values-section {
+  padding: 4rem 0;
+  background-color: #EFEFEF;
+  text-align: center;
+}
+
+.core-values-section .section-title {
+    color: #F25C05; /* Orange for values title */
+}
+
+.core-values-section .values-list {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.core-values-section .values-list li {
+  background-color: #FFFFFF; /* White background for values cards */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0F1D26; /* Dark blue accent */
+}
+
+/* Responsive adjustments for new HomePage sections */
+@media (max-width: 1024px) {
+  .about-grid, .mission-vision-grid, .choose-us-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-grid, .mission-vision-grid, .choose-us-grid {
+    grid-template-columns: 1fr; /* Stack on small screens */
+  }
+
+  .about-card, .mission-vision-card, .choose-us-card, .core-values-section .values-list li {
+    padding: 1.5rem;
+  }
+
+  .about-card-image {
+    height: 200px;
+  }
+}
+
 /* Additional styles for HomePage and ServicesPage content */
