@@ -1,5 +1,6 @@
 import React from 'react';
 import './PageStyles.css';
+import { Lightbulb, Database, Award, Handshake, TrendingUp, CheckCircle } from 'lucide-react'; // New imports
 
 function HomePage() {
   return (
@@ -8,7 +9,7 @@ function HomePage() {
       <p className="intro-text">
         Empowering Brands, Inspiring Success. Ingweplex Business and Branding Consultancy is dedicated to delivering innovative, data-driven, and client-centric solutions that empower businesses to thrive in a competitive landscape.
       </p>
-      <img src="https://placehold.co/800x400/F25C05/FFFFFF?text=Empowering+Brands" alt="Empowering Brands" className="page-image" />
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team collaborating on business strategy" className="page-image" />
 
       <h3>Our Mission</h3>
       <p>
@@ -22,12 +23,12 @@ function HomePage() {
 
       <h3>Core Values</h3>
       <ul className="values-list">
-        <li><strong>Innovation:</strong> Embracing cutting-edge technology and creative approaches to deliver forward-thinking solutions.</li>
-        <li><strong>Data-Driven:</strong> Basing strategies on real-time market insights and analytics to ensure measurable outcomes and targeted growth.</li>
-        <li><strong>Client-Centric:</strong> Prioritizing client needs and building long-term partnerships through personalized attention and bespoke strategies.</li>
-        <li><strong>Integrity:</strong> Upholding honesty, transparency, and ethical practices in all interactions and solutions.</li>
-        <li><strong>Impact:</strong> Driving measurable and positive change for our clients, ensuring tangible business growth and success.</li>
-        <li><strong>Agility:</strong> Providing flexible and adaptive solutions that respond effectively to changing market conditions.</li>
+        <li><Lightbulb size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Innovation:</strong> Embracing cutting-edge technology and creative approaches to deliver forward-thinking solutions.</li>
+        <li><Database size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Data-Driven:</strong> Basing strategies on real-time market insights and analytics to ensure measurable outcomes and targeted growth.</li>
+        <li><Award size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Client-Centric:</strong> Prioritizing client needs and building long-term partnerships through personalized attention and bespoke strategies.</li>
+        <li><Handshake size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Integrity:</strong> Upholding honesty, transparency, and ethical practices in all interactions and solutions.</li>
+        <li><TrendingUp size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Impact:</strong> Driving measurable and positive change for our clients, ensuring tangible business growth and success.</li>
+        <li><CheckCircle size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} /><strong>Agility:</strong> Providing flexible and adaptive solutions that respond effectively to changing market conditions.</li>
       </ul>
       <p className="outro-text">
         At Ingweplex, we are uniquely positioned to meet the evolving needs of businesses in 2025 by focusing on digital transformation, personalized strategies, sustainability, CX optimization, agile solutions, measurable ROI, and niche expertise. We deliver unparalleled value, driving us to transform client visions into reality.
