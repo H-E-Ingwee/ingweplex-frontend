@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './PageStyles.css';
 
 function ContactPage() {
@@ -17,30 +16,31 @@ function ContactPage() {
     }));
   };
 
-  const handleSubmit = async (e) => { // Make function async
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmissionStatus('Sending message...');
 
     try {
-      // Send data to your Node.js backend
-      const response = await fetch('http://localhost:5000/api/contact', {
+      // IMPORTANT: Replace 'https://ingweplex-backend.vercel.app/' with your actual deployed backend URL
+      const backendUrl = 'https://ingweplex-backend.vercel.app//api/contact'; // Example: 'https://ingweplex-backend.vercel.app/api/contact'
+
+      const response = await fetch(backendUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData), // Convert form data to JSON string
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) { // Check if the response status is 2xx (e.g., 200 OK)
+      if (response.ok) {
         const result = await response.json();
         setSubmissionStatus(result.message || 'Message sent successfully! We will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' }); // Clear form
+        setFormData({ name: '', email: '', message: '' });
       } else {
         const errorData = await response.json();
         setSubmissionStatus(errorData.message || 'Failed to send message. Please try again later.');
       }
     } catch (error) {
-      // Catch network errors or other unexpected issues
       console.error('Error submitting form:', error);
       setSubmissionStatus('An error occurred. Please check your network connection.');
     }
@@ -95,5 +95,3 @@ function ContactPage() {
     </div>
   );
 }
-
-export default ContactPage;
