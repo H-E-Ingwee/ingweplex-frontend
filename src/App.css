@@ -3,7 +3,7 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+  min-height: 100vh;
 }
 
 .app-header {
@@ -13,18 +13,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Styles for the logo */
 .logo-container {
-  height: 60px; /* Adjust height as needed */
+  height: 60px;
   display: flex;
   align-items: center;
 }
 
 .app-logo {
-  height: 100%; /* Make logo fill container height */
+  height: 100%;
   width: auto;
 }
 
@@ -32,9 +32,9 @@
   color: #FFFFFF;
   margin-left: 1.5rem;
   font-weight: 400;
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover and active */
-  padding-bottom: 5px; /* Space for the underline */
-  border-bottom: 2px solid transparent; /* Transparent border by default */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
 }
 
 .app-header nav a:hover {
@@ -44,16 +44,15 @@
 /* Style for the active navigation link */
 .app-header nav a.active {
   color: #D9910B; /* Gold for active link */
-  border-bottom: 2px solid #D9910B; /* Gold underline for active link */
-  font-weight: 700; /* Make active link bold */
+  border-bottom: 2px solid #D9910B;
+  font-weight: 700;
 }
 
 .app-main {
-  flex-grow: 1; /* Allows main content to take up available space */
-  padding: 2rem;
-  max-width: 1200px; /* Max width for content */
-  margin: 0 auto; /* Center the content */
-  width: 100%; /* Ensure it takes full width up to max-width */
+  flex-grow: 1;
+  /* Removed max-width and margin: 0 auto; here as container class will handle it */
+  padding: 0; /* Remove padding here, pages will have their own */
+  width: 100%;
 }
 
 .app-footer {
@@ -64,25 +63,137 @@
   font-size: 0.9rem;
 }
 
+/* --- New Hero Section Styles --- */
+.hero-section {
+  background: linear-gradient(rgba(15, 29, 38, 0.8), rgba(15, 29, 38, 0.8)), /* Dark overlay */
+              url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex; /* Use flexbox for centering content */
+  align-items: center;
+  justify-content: center;
+  min-height: 500px; /* Minimum height for the hero section */
+}
+
+.hero-content {
+  max-width: 900px; /* Limit content width within hero */
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeIn 1s ease-in forwards; /* Apply fade-in animation */
+  animation-delay: 0.2s;
+}
+
+.hero-section h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem; /* Larger font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFFF; /* White for main title */
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.5rem;
+  color: #D9910B; /* Gold for subtitle */
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between buttons */
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.8s;
+}
+
+/* General Button Styles (similar to Pawatech) */
+.btn {
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
+  display: inline-block; /* Ensure padding works correctly */
+}
+
+.btn-primary {
+  background-color: #F25C05; /* Orange */
+  color: #FFFFFF;
+  border: 2px solid #F25C05;
+}
+
+.btn-primary:hover {
+  background-color: #D9910B; /* Gold on hover */
+  border-color: #D9910B;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: #0F1D26; /* Dark background on hover */
+  border-color: #F25C05; /* Orange border on hover */
+  color: #F25C05;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 /* Basic Responsiveness */
 @media (max-width: 768px) {
   .app-header {
-    flex-direction: row; /* Keep logo and hamburger on one row */
-    justify-content: space-between; /* Space between logo and hamburger */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .logo-container {
-    height: 50px; /* Smaller logo on mobile */
+    height: 50px;
   }
 
   .desktop-nav {
-    display: none; /* Hide desktop nav on small screens */
+    display: none;
   }
 
   .app-main {
-    padding: 1rem;
+    padding: 0; /* Pages handle their own padding */
   }
 
-  /* No need to explicitly hide mobile-nav here, its own CSS handles display: block */
-  /* No need for page-section styles here, they are in PageStyles.css */
+  /* Hero section responsiveness */
+  .hero-section {
+    padding: 80px 10px;
+    min-height: 400px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons on small screens */
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 80%; /* Make buttons wider */
+    margin: 0 auto; /* Center buttons */
+  }
 }
