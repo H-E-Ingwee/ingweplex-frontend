@@ -1,13 +1,13 @@
-import React from 'react'; // This should be the ONLY React import
+import React from 'react';
 import './PageStyles.css';
-import { Lightbulb, TrendingUp, Leaf, Users, Zap, DollarSign, ShieldCheck } from 'lucide-react'; // New imports
+import { Lightbulb, TrendingUp, Leaf, Users, Zap, DollarSign, ShieldCheck } from 'lucide-react';
 
 function ServicesPage() {
   return (
-    <div className="page-content">
-      <h2>Our Comprehensive Services</h2>
-      <p className="intro-text">
-        Ingweplex Business and Branding Consultancy offers a suite of tailored services designed to address the critical needs of businesses in today's dynamic market.
+    <section className="services-section container"> {/* Use section and container */}
+      <h2 className="section-title">Our Comprehensive Services</h2>
+      <p className="section-subtitle">
+        Ingweplex Business and Branding Consultancy offers a suite of tailored solutions designed to address the critical needs of businesses in today's dynamic market.
       </p>
       <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Business professionals discussing data analytics" className="page-image" />
 
@@ -89,7 +89,7 @@ function ServicesPage() {
           <p className="value-prop">Value Proposition: Our niche expertise and client-first approach build lasting trust, delivering solutions that drive 10–20% growth in market share.</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
