@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './PageStyles.css';
+import { Send } from 'lucide-react'; // Import the Send icon
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -22,8 +23,8 @@ function ContactPage() {
     setSubmissionStatus('Sending message...');
 
     try {
-      // IMPORTANT: Replace 'https://ingweplex-backend.vercel.app' with your actual deployed backend URL
-      const backendUrl = 'https://ingweplex-backend.vercel.app/api/contact'; // Example: 'https://ingweplex-backend.vercel.app/api/contact'
+      // IMPORTANT: Replace 'YOUR_ACTUAL_VERCEL_BACKEND_URL' with your actual deployed backend URL
+      const backendUrl = 'YOUR_ACTUAL_VERCEL_BACKEND_URL/api/contact'; // Example: 'https://ingweplex-backend.vercel.app/api/contact'
 
       const response = await fetch(backendUrl, {
         method: 'POST',
@@ -53,7 +54,7 @@ function ContactPage() {
       <p className="intro-text">
         We'd love to hear from you! Whether you have an inquiry, a project idea, or just want to learn more about our services, feel free to reach out.
       </p>
-      <img src="https://placehold.co/800x400/262626/FFFFFF?text=Connect+With+Us" alt="Connect With Us" className="page-image" />
+      <img src="https://images.unsplash.com/photo-1516321497487-e288ad7be135?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Connect With Us" className="page-image" />
 
       <div className="contact-details-section">
         <h3>Contact Information</h3>
@@ -89,7 +90,9 @@ function ContactPage() {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit">
+            Send Message <Send size={18} style={{ marginLeft: '8px', verticalAlign: 'middle' }} /> {/* Added icon */}
+          </button>
           {submissionStatus && <p className="submission-status">{submissionStatus}</p>}
         </form>
       </div>
@@ -98,6 +101,3 @@ function ContactPage() {
 }
 
 export default ContactPage;
-
-// Note: Ensure to replace 'https://ingweplex-backend.vercel.app' with your actual deployed backend URL in the handleSubmit function.
-// This code assumes you have a backend endpoint set up to handle the contact form submission.

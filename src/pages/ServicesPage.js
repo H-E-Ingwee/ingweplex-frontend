@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // This should be the ONLY React import
 import './PageStyles.css';
 import { Lightbulb, TrendingUp, Leaf, Users, Zap, DollarSign, ShieldCheck } from 'lucide-react'; // New imports
 
@@ -94,5 +94,3 @@ function ServicesPage() {
 }
 
 export default ServicesPage;
-import React, { useState } from 'react';
-import './PageStyles.css';
