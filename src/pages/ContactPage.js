@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './PageStyles.css';
 
 function ContactPage() {
@@ -21,8 +22,8 @@ function ContactPage() {
     setSubmissionStatus('Sending message...');
 
     try {
-      // IMPORTANT: Replace 'https://ingweplex-backend.vercel.app/' with your actual deployed backend URL
-      const backendUrl = 'https://ingweplex-backend.vercel.app//api/contact'; // Example: 'https://ingweplex-backend.vercel.app/api/contact'
+      // IMPORTANT: Replace 'https://ingweplex-backend.vercel.app' with your actual deployed backend URL
+      const backendUrl = 'https://ingweplex-backend.vercel.app/api/contact'; // Example: 'https://ingweplex-backend.vercel.app/api/contact'
 
       const response = await fetch(backendUrl, {
         method: 'POST',
@@ -95,3 +96,8 @@ function ContactPage() {
     </div>
   );
 }
+
+export default ContactPage;
+
+// Note: Ensure to replace 'https://ingweplex-backend.vercel.app' with your actual deployed backend URL in the handleSubmit function.
+// This code assumes you have a backend endpoint set up to handle the contact form submission.
